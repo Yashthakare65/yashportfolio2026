@@ -7,6 +7,22 @@ import './ProjectsSection.css'
 function ProjectsSection() {
   const[activeCategory,setActiveCategory]=useState('All');
   const[activeTech,setActiveTech]=useState([])
+
+  const filteredProjects=projects.filter((project)=>{
+    const categoryMatch=
+    activeCategory==='All' || project.category === activeCategory.toLowerCase()
+
+    const techMatch=
+    activeTech.length===0 || activeTech.some(tech=>project.tags.includes(tech))
+
+    return categoryMatch && techMatch
+  })
+
+  const CATEGORY_ORDER={major:1,intermediate:2,minor:3}
+
+  const sortedProjects=[...filteredProjects].sort(
+    (a,b)=>CATEGORY_ORDER[a.category]-CATEGORY_ORDER[b.category]
+  )
   return (
     <section id="projects" className="projects-section">
       <div className="section__header">
@@ -21,7 +37,7 @@ function ProjectsSection() {
       setActiveTech={setActiveTech}/>
       
       <div className="projects__grid">
-      {projects.map((project)=>(
+      {sortedProjects.map((project)=>(
         <ProjectCard key={project.id} project={project}/>
       ))}
       </div>

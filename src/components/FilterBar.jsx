@@ -17,7 +17,7 @@ function FilterBar({activeCategory,setActiveCategory,activeTech,setActiveTech}){
   }
 
   const applyFilter=()=>{
-    setTempTech(tempTech)
+    setActiveTech(tempTech)
     setPanelOpen(false)
   }
 
