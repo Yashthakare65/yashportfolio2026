@@ -1,0 +1,39 @@
+/* Import our fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* CSS Variables -our design system */
+:root{
+  /*Colors*/
+  --bg-primary:#000000;
+  --bg-glass:rgba(255,255,255,0.05);
+  --border-glass:rgba(255,255,255,0.1);
+  --text-primary:#ffffff;
+  --text-secondary:#94a3b8;
+  --accent-purple:#7C3AED;
+  --accent-purple-glow:rgba(124,58,237,0.3);
+
+  /*Fonts*/
+  --font-heading:'Space Grotesk',sans-serif;
+  --font-body:'Inter',sans-serif;
+}
+
+/* Global Reset*/
+*{
+  margin:0;
+  padding:0;
+  box-sizing:boarder-box;
+}
+
+body{
+  background-color:var(--bg-primary);
+  color:var(--text-primary);
+  font-family: var(--font-body);
+}
+
+h1,h2,h3,h4,h5{
+  font-family: var(--font-heading);
+}
+
+html{
+  scroll-behavior: smooth;
+}

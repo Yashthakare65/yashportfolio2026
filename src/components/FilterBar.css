@@ -1,0 +1,51 @@
+.filterbar{
+  margin-bottom: 40px;
+}
+
+.filterbar__top{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.pill{
+  padding: 8px 20px;
+  border-radius: 50px;
+  border:1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pill:hover{
+  border-color: rgba(255,255,255,0.3);
+  color: white;
+}
+
+.pill--active{
+  background: #7C3AED;
+  border-color: #7C3AED;
+  color: white;
+}
+
+.filter-btn{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: #94a3b8;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: auto;
+}
+
+.filter-btn:hover,.filter-btn--active{
+  border-color: #7C3AED;
+  color: #7C3AED;
+}

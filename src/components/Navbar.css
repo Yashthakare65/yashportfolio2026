@@ -1,0 +1,105 @@
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  transition: all 0.3s ease;
+}
+
+/*glass effect appears after scrolling*/
+.navbar--scrolled{
+  background: rgba(0,0,0,0.7);
+  backdrop-filter:blur(20px);
+  --webkit-backdrop-filter:blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navbar__logo{
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor:pointer;
+  letter-spacing: 2px;
+}
+
+.navbar__links{
+  display: flex;
+  list-style:none;
+  gap:36px;
+}
+
+.navbar__links li{
+  font-size: 14px;
+  color: var(--text-secondary);
+  cursor:pointer;
+  transition:color 0.2s ease;
+  font-family:var(--font-body);
+}
+
+.navbar__links li:hover{
+  color: var(--text-primary);
+}
+
+.navbar__right{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/*Base button styles*/
+.btn{
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border:none;
+}
+
+.btn--ghost{
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn--ghost:hover{
+  border-color: rgba(255,255,255,0.6);
+  background:rgba(255,255,255,0.05);
+}
+
+.btn--purple{
+  background: var(--accent-purple);
+  color:#ffffff;
+}
+
+.btn--purple:hover{
+  background: #6D28D9;
+  box-shadow: 0 0 20px var(--accent-purple-glow);
+}
+
+/*Theme toggle*/
+.theme-toggle{
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color:var(--text-primary);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover{
+  background: rgba(255,255,255,0.1);
+}
