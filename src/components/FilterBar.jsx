@@ -70,7 +70,7 @@ function FilterBar({activeCategory,setActiveCategory,activeTech,setActiveTech}){
             ))}
         </div>
 
-        <div className="panel__actons">
+        <div className="panel__actions">
           <button className="btn btn--ghost" onClick={clearFilter}>Clear</button>
           <button className="btn btn--purple" onClick={applyFilter}>Apply</button>
         </div>
