@@ -3,6 +3,7 @@ import { projects } from '../data/projects'
 import ProjectCard from './ProjectCard'
 import FilterBar from './FilterBar'
 import './ProjectsSection.css'
+import EmptyState from './EmptyState'
 
 function ProjectsSection() {
   const[activeCategory,setActiveCategory]=useState('All');
@@ -36,35 +37,8 @@ function ProjectsSection() {
       activeTech={activeTech}
       setActiveTech={setActiveTech}/>
 
-      {sortedProjects.length===0?(
-        <div className="projects__empty">
-          <svg viewBox="0 0 200 200" className="empty__svg">
-            <circle cx="100" cy="90" r="35" fill="rgba(124,58,237,0.15)"/>
-            <rect x="85" y="60" width="30" height="40" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(124,58,237,0.5)" strokeWidth="2"/>
-            <line x1="100" y1="60" x2="100" y2="35" stroke="rgba(124,58,237,0.5)" strokeWidth="2"/>
-            <circle cx="100" cy="30" r="6" fill="#7C3AED"/>
-          <line x1="95" y1="100" x2="85" y2="115" stroke="rgba(225,225,225,0.2)" strokeWidth="2"/>
-          <line x1="105" y1="100" x2="115" y2="115" stroke="rgba(225,225,225,0.2)" strokeWidth="2"/>
-          <circle cx="40" cy="40" r="2" fill="white" opacity="0.4"/>
-          <circle cx="160" cy="60" r="2" fill="white" opacity="0.5"/>
-          <circle cx="50" cy="140" r="2" fill="white" opacity="0.3"/>
-          <circle cx="150" cy="150" r="2" fill="white" opacity="0.4"/>
-          <path d="M 60 90 Q 40 90 30 70" stroke="rgba(124,58,237,0.4)" strokeWidth="2" strokeDasharray="4 4" fill="none" />
-          <path d="M 140 90 Q 160 90 170 70" stroke="rgba(124,58,237,0.4)" strokeWidth="2" strokeDasharray="4 4" fill="none" />
-          </svg>
-
-          <h3 className="empty__title">No Signal Found</h3>
-          <p className="empty__text">Looks like there's nothing out here matching your filters.</p>
-
-          <button
-          className="btn btn--purple"
-          onClick={()=>{
-            setActiveCategory('All')
-            setActiveTech([])
-          }}
-          >Bring Me Back</button>
-        </div>
-      ):(
+      {sortedProjects.length===0?<EmptyState/>
+      :(
       <div className="projects__grid">
       {sortedProjects.map((project)=>(
         <ProjectCard key={project.id} project={project}/>

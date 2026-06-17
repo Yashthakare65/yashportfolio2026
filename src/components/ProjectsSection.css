@@ -29,36 +29,5 @@
   color: white;
 }
 
-.projects__empty{
-  text-align: center;
-  padding: 20px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap:12px;
-}
 
-.empty__svg{
-  width: 160px;
-  height: auto;
-  animation: floatSatellite 3s ease-in-out infinite;
-}
 
-@keyframes floatSatellite{
-  0%,100% {transform: translateY(0px);}
-  50%{transform: translateY(-12px);}
-}
-
-.empty__title{
-  font-size: 22px;
-  font-weight: 600;
-  color: white;
-  font-family: var(--font-heading);
-}
-
-.empty__text{
-  font-size: 14px;
-  color: #94a3b8;
-  max-width: 280px;
-  margin-bottom: 12px;
-}
