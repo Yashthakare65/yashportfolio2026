@@ -37,7 +37,10 @@ function ProjectsSection() {
       activeTech={activeTech}
       setActiveTech={setActiveTech}/>
 
-      {sortedProjects.length===0?<EmptyState/>
+      {sortedProjects.length===0?<EmptyState onReset={() => {
+    setActiveCategory('All')
+    setActiveTech([])
+  }}/>
       :(
       <div className="projects__grid">
       {sortedProjects.map((project)=>(
