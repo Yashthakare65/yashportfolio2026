@@ -1,0 +1,24 @@
+.section__header {
+  margin-bottom: 48px;
+}
+
+.section__label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #7C3AED;
+  margin-bottom: 8px;
+}
+
+.section__title {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+}
+
+.section__subtitle {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-top: 8px;
+}

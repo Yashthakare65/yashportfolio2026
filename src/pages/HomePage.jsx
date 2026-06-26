@@ -2,6 +2,7 @@ import {useState} from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import ProjectsSection from '../components/ProjectsSection'
+import AchievementsSection from '../components/AchievementsSection'
 
 function HomePage() {
   const[theme,setTheme]=useState('dark')
@@ -14,9 +15,7 @@ function HomePage() {
       <Navbar theme={theme} toggleTheme={toggleTheme}/>
       <Hero/>
       <ProjectsSection/>
-      <section id="achievements" style={{height:'100vh',}}>
-        <h1 style={{color:'white',padding:'40px'}}>Achievements Section</h1>
-      </section>
+      <AchievementsSection/>
       <section id="contact" style={{height:'100vh',}}>
         <h1 style={{color:'white',padding:'40px'}}>Conatct Section</h1>
       </section>

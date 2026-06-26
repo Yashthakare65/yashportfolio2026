@@ -3,6 +3,7 @@ import { projects } from '../data/projects'
 import ProjectCard from './ProjectCard'
 import FilterBar from './FilterBar'
 import './ProjectsSection.css'
+import '../styles/shared.css'
 import EmptyState from './EmptyState'
 
 function ProjectsSection() {
